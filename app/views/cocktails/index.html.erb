@@ -1,16 +1,14 @@
 <h1 class="text-center">All cocktails</h1>
 <div class = "container">
-  <div class="cards"></div>
-  <div class="row">
+  <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-product col-3 m-1">
+      <div class="card-product">
           <img src="https://www.elle.be/fr/wp-content/uploads/2017/07/pink_margarita-480x545.jpg" />
         <div class="card-product-infos">
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
       </div>
   <% end %>
-  </div>
   </div>
 </div>
 
