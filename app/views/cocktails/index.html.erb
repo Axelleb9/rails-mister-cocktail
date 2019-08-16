@@ -1,9 +1,11 @@
-<h1 class="text-center">All cocktails</h1>
+<h1 class="text-left">Mister Cocktail Miami</h1>
+<h3 class="text-center">All cocktails</h3>
 <div class = "container">
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <div class="card-product">
-          <img src="https://www.elle.be/fr/wp-content/uploads/2017/07/pink_margarita-480x545.jpg" />
+          <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
+        <br>
         <div class="card-product-infos">
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
@@ -14,6 +16,3 @@
 
 
 
-
-  
-  

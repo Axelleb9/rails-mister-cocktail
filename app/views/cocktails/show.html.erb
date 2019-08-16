@@ -1,4 +1,6 @@
 <h3><%= @cocktail.name %></h3>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<br>
 <p>Ingredients:</p>
 <ul><% @cocktail.doses.each do |dose|%></p>
   <li><%= dose.ingredient.name %>: <%= dose.description %>cl</li>
