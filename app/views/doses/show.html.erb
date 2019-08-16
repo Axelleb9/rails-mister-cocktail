@@ -1,0 +1,6 @@
+<h3>Dose</h3>
+<% @cocktail.doses.each do |review| %>
+  <li><%= dose.description %></li>
+<% end %>
+
+<%= link_to "Delete dose",  dose_path(dose)%>
